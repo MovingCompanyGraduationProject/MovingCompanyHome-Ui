@@ -33,31 +33,29 @@
     <div class="x-body">
       <div class="layui-row">
         <form class="layui-form layui-col-md12 x-so layui-form-pane">
-          <div class="layui-input-inline">
-            <select name="cateid">
-              <option>规则分类</option>
-              <option>文章</option>
-              <option>会员</option>
-              <option>权限</option>
-            </select>
-          </div>
-          <div class="layui-input-inline">
+         <!-- <div class="layui-input-inline">
             <select name="contrller">
               <option>请控制器</option>
               <option>Index</option>
               <option>Goods</option>
               <option>Cate</option>
             </select>
-          </div>
+          </div> -->
           <div class="layui-input-inline">
             <select name="action">
-              <option>请方法</option>
+              <option selected hidden disabled value="">权限规则</option>
               <option>add</option>
               <option>login</option>
               <option>checklogin</option>
             </select>
           </div>
           <input class="layui-input" placeholder="权限名" name="cate_name" >
+		  <div class="layui-input-inline">
+		    <select name="cateid">
+		      <option selected hidden disabled value="">所属分类</option>
+		      <option>会员相关</option>
+		    </select>
+		  </div>
           <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon"></i>增加</button>
         </form>
       </div>
@@ -100,10 +98,10 @@
       <div class="page">
         <div>
           <a class="prev" href="">&lt;&lt;</a>
-          <a class="num" href="">1</a>
-          <span class="current">2</span>
+          <span class="current" href="">1</span>
+          <!-- <a class="num" href="">2</a>
           <a class="num" href="">3</a>
-          <a class="num" href="">489</a>
+          <a class="num" href="">489</a> -->
           <a class="next" href="">&gt;&gt;</a>
         </div>
       </div>

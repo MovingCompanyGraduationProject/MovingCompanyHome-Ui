@@ -65,19 +65,23 @@
               <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
             </td>
             <td>1</td>
-            <td>小明</td>
-            <td>男</td>
-            <td>13000000000</td>
-            <td>admin@mail.com</td>
-            <td>北京市 海淀区</td>
-            <td>2017-01-01 11:11:42</td>
+            <td>王二明</td>
+            <td>女</td>
+            <td>12312312312</td>
+            <td>4587595623@qq.com</td>
+            <td>北京市 朝阳区</td>
+            <td>2020-09-10 18:15:42</td>
             <td class="td-status">
-              <span class="layui-btn layui-btn-danger layui-btn-mini">
-                                已删除
-                            </span>
+              <span class="layui-btn layui-btn-normal layui-btn-mini">已删除</span></td>
             <td class="td-manage">
-              <a title="恢复" onclick="member_del(this,'要删除的id')" href="javascript:;">
-                <i class="layui-icon">&#xe618;</i>
+              <a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
+                <i class="layui-icon">&#xe601;</i>
+              </a>
+              <a title="编辑"  onclick="x_admin_show('编辑','member-edit.html',600,400)" href="javascript:;">
+                <i class="layui-icon">&#xe642;</i>
+              </a>
+              <a onclick="x_admin_show('修改密码','member-password.html',600,400)" title="修改密码" href="javascript:;">
+                <i class="layui-icon">&#xe631;</i>
               </a>
               <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
                 <i class="layui-icon">&#xe640;</i>
@@ -88,20 +92,24 @@
             <td>
               <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
             </td>
-            <td>1</td>
-            <td>小明</td>
+            <td>2</td>
+            <td>qweqwe</td>
             <td>男</td>
-            <td>13000000000</td>
-            <td>admin@mail.com</td>
-            <td>北京市 海淀区</td>
-            <td>2017-01-01 11:11:42</td>
+            <td>15035558954</td>
+            <td>1231231231@qq.com</td>
+            <td>通辽市 科尔沁区</td>
+            <td>2020-09-10 18:15:42</td>
             <td class="td-status">
-              <span class="layui-btn layui-btn-danger layui-btn-mini">
-                                已删除
-                            </span>
+              <span class="layui-btn layui-btn-normal layui-btn-mini">已删除</span></td>
             <td class="td-manage">
-              <a title="恢复" onclick="member_del(this,'要删除的id')" href="javascript:;">
-                <i class="layui-icon">&#xe618;</i>
+              <a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
+                <i class="layui-icon">&#xe601;</i>
+              </a>
+              <a title="编辑"  onclick="x_admin_show('编辑','member-edit.html',600,400)" href="javascript:;">
+                <i class="layui-icon">&#xe642;</i>
+              </a>
+              <a onclick="x_admin_show('修改密码','member-password.html',600,400)" title="修改密码" href="javascript:;">
+                <i class="layui-icon">&#xe631;</i>
               </a>
               <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
                 <i class="layui-icon">&#xe640;</i>
@@ -113,10 +121,10 @@
       <div class="page">
         <div>
           <a class="prev" href="">&lt;&lt;</a>
-          <a class="num" href="">1</a>
-          <span class="current">2</span>
+          <span class="current" href="">1</span>
+          <!-- <a class="num" href="">2</a>
           <a class="num" href="">3</a>
-          <a class="num" href="">489</a>
+          <a class="num" href="">489</a> -->
           <a class="next" href="">&gt;&gt;</a>
         </div>
       </div>

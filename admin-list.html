@@ -5,13 +5,15 @@
     <title>欢迎页面-X-admin2.0</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <!-- <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" /> -->
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/xadmin.css">
     <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="./lib/layui/layui.js" charset="utf-8"></script>
     <script type="text/javascript" src="./js/xadmin.js"></script>
+	<script type="text/javascript" src="./js/myTools.js"></script>
+	<script type="text/javascript" src="./js/dataDispose.js"></script>
     <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
     <!--[if lt IE 9]>
       <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
@@ -44,7 +46,8 @@
         <button class="layui-btn" onclick="x_admin_show('添加用户','./admin-add.html')"><i class="layui-icon"></i>添加</button>
         <span class="x-right" style="line-height:40px">共有数据：88 条</span>
       </xblock>
-      <table class="layui-table">
+	  <div id="myAdminTable"></div>
+      <!-- <table class="layui-table">
         <thead>
           <tr>
             <th>
@@ -69,7 +72,7 @@
             <td>18925139194</td>
             <td>113664000@qq.com</td>
             <td>超级管理员</td>
-            <td>2017-01-01 11:11:42</td>
+            <td>2020-09-03 18:11:42</td>
             <td class="td-status">
               <span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td>
             <td class="td-manage">
@@ -85,20 +88,20 @@
             </td>
           </tr>
         </tbody>
-      </table>
-      <div class="page">
-        <div>
-          <a class="prev" href="">&lt;&lt;</a>
-          <a class="num" href="">1</a>
-          <span class="current">2</span>
-          <a class="num" href="">3</a>
-          <a class="num" href="">489</a>
-          <a class="next" href="">&gt;&gt;</a>
-        </div>
-      </div>
-
+      </table> -->
+     <div class="page">
+       <div>
+         <a class="prev" href="">&lt;&lt;</a>
+         <span class="current" href="">1</span>
+         <!-- <a class="num" href="">2</a>
+         <a class="num" href="">3</a>
+         <a class="num" href="">489</a> -->
+         <a class="next" href="">&gt;&gt;</a>
+       </div>
+     </div>
     </div>
     <script>
+		getManager();
       layui.use('laydate', function(){
         var laydate = layui.laydate;
         
@@ -164,7 +167,8 @@
         hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
-      })();</script>
+      })();
+	  </script>
   </body>
 
 </html>
