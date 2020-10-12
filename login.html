@@ -14,8 +14,8 @@
     <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="./lib/layui/layui.js" charset="utf-8"></script>
     <script type="text/javascript" src="./js/xadmin.js"></script>
-	<script type="text/javascript" src="./js/myTools.js"></script>
-	<script type="text/javascript" src="./js/dataDispose.js"></script>
+	<script type="text/javascript" src="./js/data.tools.js"></script>
+	<script type="text/javascript" src="./js/data.dispose.js"></script>
 </head>
 <body class="login-bg">
     
@@ -23,7 +23,7 @@
         <div class="message">管理登录</div>
         <div id="darkbannerwrap"></div>
         
-        <form id="loginForm" method="post" action=""  onsubmit="return false;" class="layui-form">
+        <form id="loginForm" onsubmit="return false;" class="layui-form">
             <input name="username" placeholder="用户名"  type="text" lay-verify="required" class="layui-input" >
             <hr class="hr15">
             <input name="password" lay-verify="required" placeholder="密码"  type="password" class="layui-input">
@@ -38,6 +38,7 @@
 			MySubmit(formName,url,function(data){
 				if(data!=null){
 					if(data.msg=="ok"){
+						window.sessionStorage.setItem("managerjson",JSON.stringify(data));
 						window.location.href ="index.html";
 					}
 					else{

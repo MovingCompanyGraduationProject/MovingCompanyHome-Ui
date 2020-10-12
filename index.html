@@ -14,8 +14,8 @@
     <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="./lib/layui/layui.js" charset="utf-8"></script>
     <script type="text/javascript" src="./js/xadmin.js"></script>
-	<script type="text/javascript" src="./js/myTools.js"></script>
-	<script type="text/javascript" src="./js/dataDispose.js"></script>
+	<script type="text/javascript" src="./js/data.tools.js"></script>
+	<script type="text/javascript" src="./js/data.dispose.js"></script>
 
 </head>
 <body>
@@ -29,19 +29,19 @@
           <li class="layui-nav-item">
             <a href="javascript:;">+新增</a>
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
-              <dd><a onclick="x_admin_show('资讯','http://www.baidu.com')"><i class="iconfont">&#xe6a2;</i>资讯</a></dd>
-              <dd><a onclick="x_admin_show('图片','http://www.baidu.com')"><i class="iconfont">&#xe6a8;</i>图片</a></dd>
-               <dd><a onclick="x_admin_show('用户','http://www.baidu.com')"><i class="iconfont">&#xe6b8;</i>用户</a></dd>
+              <dd><a onclick="x_admin_show('百度','http://www.baidu.com')"><i class="iconfont">&#xe6a2;</i>资讯</a></dd>
+              <dd><a onclick="x_admin_show('管理员新增','admin-add.html',600,500)"><i class="iconfont">&#xe6a8;</i>管理员</a></dd>
+               <dd><a onclick="x_admin_show('用户新增','member-add.html',600,650)"><i class="iconfont">&#xe6b8;</i>用户</a></dd>
             </dl>
           </li>
         </ul>
         <ul class="layui-nav right" lay-filter="">
           <li class="layui-nav-item">
-            <a href="javascript:;">admin</a>
+            <a href="javascript:;" id="managername"></a>
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
               <dd><a onclick="x_admin_show('个人信息','http://www.baidu.com')">个人信息</a></dd>
-              <dd><a onclick="x_admin_show('切换帐号','http://www.baidu.com')">切换帐号</a></dd>
-              <dd><a href="./login.html">退出</a></dd>
+              <dd><a onclick="x_admin_show('切换帐号','login.html')">切换帐号</a></dd>
+              <dd><a href="./login.html" onclick="loginout()">退出登录</a></dd>
             </dl>
           </li>
           <li class="layui-nav-item to-index"><a href="http://127.0.0.1:8848/MovingCompany-Ui/index.html">前台首页</a></li>
@@ -62,14 +62,14 @@
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a _href="member-list.html">
+                        <a _href="member-list.html" onclick="queryAllMemberList(1)">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>用户列表</cite>
                             
                         </a>
                     </li >
                     <li>
-                        <a _href="member-del.html">
+                        <a _href="member-del.html" onclick="queryAllDelMemberList(1)">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>用户删除</cite>
                             
@@ -116,7 +116,7 @@
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a _href="order-list.html">
+                        <a _href="order-list.html" onclick="queryAllOrderForm(1)">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>订单列表</cite>
                         </a>
@@ -131,32 +131,32 @@
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a _href="admin-list.html">
+                        <a _href="admin-list.html" onclick="queryManager(1)">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>管理员列表</cite>
                         </a>
                     </li >
                     <li>
-                        <a _href="admin-role.html">
+                        <a _href="admin-role.html" onclick="queryRoleManager(1)">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>角色管理</cite>
                         </a>
                     </li >
                     <li>
-                        <a _href="admin-cate.html">
+                        <a _href="admin-cate.html" onclick="queryAuthorityType(1)">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>权限分类</cite>
                         </a>
                     </li >
                     <li>
-                        <a _href="admin-rule.html">
+                        <a _href="admin-rule.html" onclick="queryAuthorityManager(1)">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>权限管理</cite>
                         </a>
                     </li >
                 </ul>
             </li>
-            <li>
+           <!-- <li>
                 <a href="javascript:;">
                     <i class="iconfont">&#xe6ce;</i>
                     <cite>系统统计</cite>
@@ -212,7 +212,7 @@
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li> -->
         </ul>
       </div>
     </div>
@@ -236,9 +236,13 @@
     <!-- 中部结束 -->
     <!-- 底部开始 -->
     <div class="footer">
-        <div class="copyright">Copyright ©2017 All Rights Reserved</div>  
+        <div class="copyright">Copyright ©2020 All Rights Reserved</div>  
     </div>
     <!-- 底部结束 -->
-    
+	<script src="js/data.tools.js"></script>
+	<script src="js/data.dispose.js"></script>
+    <script>
+		queryAllMemberList(1);
+	</script>
 </body>
 </html>
